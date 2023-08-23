@@ -7,7 +7,7 @@ spring:
     consumer:
       group-id: notificator-listener
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       properties:
         spring:
           json:
@@ -15,3 +15,6 @@ spring:
               packages: 'com.ld.confirmationfornotificator.dto'
     listener:
       ack-mode: manual-immediate
+
+server:
+  port: 8081
