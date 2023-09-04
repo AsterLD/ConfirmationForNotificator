@@ -1,11 +1,11 @@
-package com.ld.confirmationfornotificator.service.impl;
+package com.ld.eventplannerapprover.service.impl;
 
-import com.ld.confirmationfornotificator.dto.EventStatusDTO;
-import com.ld.confirmationfornotificator.dto.EventToApproveDTO;
-import com.ld.confirmationfornotificator.entity.ReservedEvent;
-import com.ld.confirmationfornotificator.enums.EventStatus;
-import com.ld.confirmationfornotificator.repo.ReservedEventRepository;
-import com.ld.confirmationfornotificator.service.ConfirmationService;
+import com.ld.eventplannerapprover.dto.EventStatusDTO;
+import com.ld.eventplannerapprover.dto.EventToApproveDTO;
+import com.ld.eventplannerapprover.entity.ReservedEvent;
+import com.ld.eventplannerapprover.enums.EventStatus;
+import com.ld.eventplannerapprover.repo.ReservedEventRepository;
+import com.ld.eventplannerapprover.service.ConfirmationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

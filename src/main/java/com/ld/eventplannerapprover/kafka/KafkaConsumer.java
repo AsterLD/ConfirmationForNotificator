@@ -1,9 +1,8 @@
-package com.ld.confirmationfornotificator.kafka;
+package com.ld.eventplannerapprover.kafka;
 
-import com.ld.confirmationfornotificator.dto.EventStatusDTO;
-import com.ld.confirmationfornotificator.dto.EventToApproveDTO;
-import com.ld.confirmationfornotificator.enums.EventStatus;
-import com.ld.confirmationfornotificator.service.ConfirmationService;
+import com.ld.eventplannerapprover.dto.EventToApproveDTO;
+import com.ld.eventplannerapprover.enums.EventStatus;
+import com.ld.eventplannerapprover.service.ConfirmationService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,8 +20,8 @@ public class KafkaConsumer {
     @Autowired
     private KafkaProducer kafkaProducer;
 
-    @KafkaListener(topics = "notificator-approve",
-            groupId = "notificator-listener")
+    @KafkaListener(topics = "event-planner-approve",
+            groupId = "event-planner-listener")
     public void consume(EventToApproveDTO eventToApproveDTO) {
         log.info("Message get: " + eventToApproveDTO.getId());
         kafkaProducer.sendMessage(confirmationService.confirmEvent(eventToApproveDTO));

@@ -1,6 +1,6 @@
-package com.ld.confirmationfornotificator.kafka;
+package com.ld.eventplannerapprover.kafka;
 
-import com.ld.confirmationfornotificator.dto.EventStatusDTO;
+import com.ld.eventplannerapprover.dto.EventStatusDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -15,7 +15,7 @@ public class KafkaProducer {
 
     public void sendMessage(EventStatusDTO event) {
         log.info("Message sent: " + event.getId());
-        kafkaTemplate.send("notificator", event);
+        kafkaTemplate.send("event-planner", event);
     }
 
 }

@@ -1,6 +1,6 @@
-package com.ld.confirmationfornotificator.repo;
+package com.ld.eventplannerapprover.repo;
 
-import com.ld.confirmationfornotificator.entity.ReservedEvent;
+import com.ld.eventplannerapprover.entity.ReservedEvent;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

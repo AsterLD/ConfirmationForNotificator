@@ -1,7 +1,7 @@
-package com.ld.confirmationfornotificator.config;
+package com.ld.eventplannerapprover.config;
 
 
-import com.ld.confirmationfornotificator.dto.EventStatusDTO;
+import com.ld.eventplannerapprover.dto.EventStatusDTO;
 import org.apache.kafka.clients.admin.NewTopic;
 import org.springframework.boot.autoconfigure.kafka.KafkaProperties;
 import org.springframework.context.annotation.Bean;
@@ -17,7 +17,7 @@ import org.springframework.kafka.support.converter.StringJsonMessageConverter;
 public class KafkaConfig {
     @Bean
     public NewTopic topic() {
-        return TopicBuilder.name("notificator-approve").build();
+        return TopicBuilder.name("event-planner-approve").build();
     }
 
     @Bean

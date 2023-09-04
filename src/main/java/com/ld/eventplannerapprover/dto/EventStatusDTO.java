@@ -1,7 +1,7 @@
-package com.ld.confirmationfornotificator.dto;
+package com.ld.eventplannerapprover.dto;
 
 
-import com.ld.confirmationfornotificator.enums.EventStatus;
+import com.ld.eventplannerapprover.enums.EventStatus;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 

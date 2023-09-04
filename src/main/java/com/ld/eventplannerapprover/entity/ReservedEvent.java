@@ -1,4 +1,4 @@
-package com.ld.confirmationfornotificator.entity;
+package com.ld.eventplannerapprover.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

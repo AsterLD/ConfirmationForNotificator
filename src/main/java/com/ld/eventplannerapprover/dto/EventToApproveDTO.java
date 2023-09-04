@@ -1,4 +1,4 @@
-package com.ld.confirmationfornotificator.dto;
+package com.ld.eventplannerapprover.dto;
 
 import lombok.Data;
 

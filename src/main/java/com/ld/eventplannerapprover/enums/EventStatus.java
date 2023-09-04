@@ -1,4 +1,4 @@
-package com.ld.confirmationfornotificator.enums;
+package com.ld.eventplannerapprover.enums;
 
 public enum EventStatus {
     CREATED,

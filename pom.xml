@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.ld</groupId>
-	<artifactId>confirmation-for-notificator</artifactId>
+	<artifactId>EventPlannerApprover</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Confirmation for Notificator</name>
 	<description>Additional service for confirmation to notifier</description>
