@@ -11,8 +11,8 @@
 	<groupId>com.ld</groupId>
 	<artifactId>EventPlannerApprover</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Confirmation for Notificator</name>
-	<description>Additional service for confirmation to notifier</description>
+	<name>EventPlannerApprover</name>
+	<description>Additional service for approving events</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -85,7 +85,6 @@
 			<version>1.4.0</version>
 		</dependency>
 	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -94,5 +93,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
