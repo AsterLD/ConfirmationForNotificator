@@ -1,7 +1,6 @@
 package com.ld.eventplannerapprover.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 

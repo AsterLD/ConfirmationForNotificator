@@ -1,7 +1,6 @@
 package com.ld.eventplannerapprover.kafka;
 
 import com.ld.eventplannerapprover.dto.EventToApproveDTO;
-import com.ld.eventplannerapprover.enums.EventStatus;
 import com.ld.eventplannerapprover.service.ConfirmationService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

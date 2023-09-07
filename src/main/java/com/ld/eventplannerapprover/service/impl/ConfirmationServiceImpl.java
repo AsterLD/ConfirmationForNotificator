@@ -17,7 +17,6 @@ public class ConfirmationServiceImpl implements ConfirmationService {
 
     private final ReservedEventRepository reservedEventRepository;
 
-
     @Override
     public EventStatusDTO confirmEvent(EventToApproveDTO eventToApproveDTO) {
         if(isTimeIsReserved(eventToApproveDTO)) {
