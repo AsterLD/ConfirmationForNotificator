@@ -20,23 +20,23 @@ public class ConfirmationServiceImpl implements ConfirmationService {
     @Override
     public EventStatusDTO confirmEvent(EventToApproveDTO eventToApproveDTO) {
         if(isTimeIsReserved(eventToApproveDTO)) {
-            log.info("Event id: " + eventToApproveDTO.getId()
-                    + " on date: " + eventToApproveDTO.getEventDate()
+            log.info("Event id: " + eventToApproveDTO.id()
+                    + " on date: " + eventToApproveDTO.eventDate()
                     + " is approved.");
-            return new EventStatusDTO(eventToApproveDTO.getId(), EventStatus.APPROVED);
+            return new EventStatusDTO(eventToApproveDTO.id(), EventStatus.APPROVED);
         } else {
-            log.info("Event id: " + eventToApproveDTO.getId()
-                    + " on date: " + eventToApproveDTO.getEventDate()
+            log.info("Event id: " + eventToApproveDTO.id()
+                    + " on date: " + eventToApproveDTO.eventDate()
                     + " is rejected.");
-            return new EventStatusDTO(eventToApproveDTO.getId(), EventStatus.REJECTED);
+            return new EventStatusDTO(eventToApproveDTO.id(), EventStatus.REJECTED);
         }
     }
 
     private boolean isTimeIsReserved (EventToApproveDTO eventToApproveDTO) {
-        if (reservedEventRepository.existsReservedEventByEventDate(eventToApproveDTO.getEventDate())) {
+        if (reservedEventRepository.existsReservedEventByEventDate(eventToApproveDTO.eventDate())) {
             return false;
         } else {
-            ReservedEvent reservedEvent = ReservedEvent.builder().eventDate(eventToApproveDTO.getEventDate()).build();
+            ReservedEvent reservedEvent = ReservedEvent.builder().eventDate(eventToApproveDTO.eventDate()).build();
             reservedEventRepository.save(reservedEvent);
             return true;
         }

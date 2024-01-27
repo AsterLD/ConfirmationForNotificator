@@ -14,7 +14,7 @@ public class KafkaProducer {
     private KafkaTemplate<String, EventStatusDTO> kafkaTemplate;
 
     public void sendMessage(EventStatusDTO event) {
-        log.info("Message sent: " + event.getId());
+        log.info("Message sent: " + event.id());
         kafkaTemplate.send("event-planner", event);
     }
 

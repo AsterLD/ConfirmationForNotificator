@@ -22,7 +22,7 @@ public class KafkaConsumer {
     @KafkaListener(topics = "event-planner-approve",
             groupId = "event-planner-listener")
     public void consume(EventToApproveDTO eventToApproveDTO) {
-        log.info("Message get: " + eventToApproveDTO.getId());
+        log.info("Message get: " + eventToApproveDTO.id());
         kafkaProducer.sendMessage(confirmationService.confirmEvent(eventToApproveDTO));
     }
 }
